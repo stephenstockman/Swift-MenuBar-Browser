@@ -3,7 +3,6 @@
 //  TCV2
 //
 //  Created by Stephen Stockman on 6/4/15.
-//  Copyright (c) 2015 Eyewyre. All rights reserved.
 //
 
 import Cocoa
@@ -26,7 +25,7 @@ class MenuViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // WebView setup and load
-        let url = NSURL(string:"http://teamcity.eyewyre.com:8111")
+        let url = NSURL(string:"http://google.com")
         var req = NSURLRequest(URL: url!)
         self.webView.mainFrame.loadRequest(req)
         

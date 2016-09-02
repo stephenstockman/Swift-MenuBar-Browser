@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MenuViewController" customModule="TCV2" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="aKj-8U-anc" id="Xh6-1D-nyr"/>
+                <outlet property="customView" destination="Hz6-mo-xeY" id="w7F-Y9-uya"/>
+                <outlet property="forwardButton" destination="fw3-9Q-B4w" id="MUa-Yh-ptY"/>
+                <outlet property="pinCheck" destination="0aC-vN-7yf" id="t16-Lw-na1"/>
+                <outlet property="reloadButton" destination="feT-yp-DXa" id="VTI-pl-0fi"/>
+                <outlet property="timeLabel" destination="0aC-vN-7yf" id="NEk-jS-Sfe"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="webView" destination="pn1-sT-EcF" id="xFC-ce-z4W"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView wantsLayer="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="2" width="1045" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <webView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pn1-sT-EcF">
+                    <rect key="frame" x="0.0" y="38" width="923" height="173"/>
+                    <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                        <nil key="identifier"/>
+                    </webPreferences>
+                </webView>
+                <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feT-yp-DXa">
+                    <rect key="frame" x="-6" y="199" width="84" height="32"/>
+                    <buttonCell key="cell" type="push" title="Reload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BT1-MO-DAf">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="reloadPressed:" target="-2" id="3dK-Do-moE"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0aC-vN-7yf">
+                    <rect key="frame" x="143" y="209" width="397" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="ISL-na-Rf1">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fw3-9Q-B4w">
+                    <rect key="frame" x="117" y="207" width="20" height="15"/>
+                    <buttonCell key="cell" type="smallSquare" title="-&gt;" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AWa-0o-mwh">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="forward:" target="-2" id="IeN-79-SXO"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKj-8U-anc">
+                    <rect key="frame" x="84" y="207" width="20" height="15"/>
+                    <buttonCell key="cell" type="smallSquare" title="&lt;-" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SAk-s6-kcQ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="back:" target="-2" id="3JF-Wd-wAx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="feT-yp-DXa" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="92q-2M-Uhq"/>
+                <constraint firstItem="pn1-sT-EcF" firstAttribute="top" secondItem="feT-yp-DXa" secondAttribute="bottom" id="9hm-e1-nHa"/>
+                <constraint firstAttribute="trailing" secondItem="pn1-sT-EcF" secondAttribute="trailing" id="A86-rQ-sYb"/>
+                <constraint firstItem="feT-yp-DXa" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="KTX-wU-pVh"/>
+                <constraint firstAttribute="bottom" secondItem="pn1-sT-EcF" secondAttribute="bottom" id="LaY-dd-Rgn"/>
+                <constraint firstItem="pn1-sT-EcF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Xf0-oz-zkV"/>
+            </constraints>
+            <point key="canvasLocation" x="133.5" y="372.5"/>
+        </customView>
+    </objects>
+</document>
